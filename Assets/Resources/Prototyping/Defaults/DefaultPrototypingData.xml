@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-16"?>
+<PrototypingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Prototypes>
+    <PrototypeData>
+      <Name>Первый тест</Name>
+      <Description>Я не знаю что я делаю. Не имею ни мальейшего понятия. Серьезно.</Description>
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>Второй тест</Name>
+      <Description>Я не знаю что я делаю. Не имею ни мальейшего понятия. Серьезно.</Description>
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>Третий тест</Name>
+      <Description>Я не знаю что я делаю. Не имею ни мальейшего понятия. Серьезно.</Description>
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>Али Баба Усатый Хрен</Name>
+      <Description>Я не знаю что я делаю. Не имею ни мальейшего понятия. Серьезно.</Description>
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>Проверка даалекиния</Name>
+      <Description>Даалеки захватят мир.</Description>
+      <IsEnabled>false</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>Проверка мангалоров</Name>
+      <Description>Мангалоры снова стреляют по мирным кораблям</Description>
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+    <PrototypeData>
+      <Name>New Test</Name>
+      <Description />
+      <IsEnabled>true</IsEnabled>
+      <Keys />
+      <Objects />
+      <Fields />
+      <Relations />
+    </PrototypeData>
+  </Prototypes>
+</PrototypingData>

@@ -1,0 +1,53 @@
+\hypertarget{class_hattori_game2_1_1_core_1_1_x_m_l_serialization}{}\section{Hattori\+Game2.\+Core.\+X\+M\+L\+Serialization$<$ T $>$ Class Template Reference}
+\label{class_hattori_game2_1_1_core_1_1_x_m_l_serialization}\index{Hattori\+Game2.\+Core.\+X\+M\+L\+Serialization$<$ T $>$@{Hattori\+Game2.\+Core.\+X\+M\+L\+Serialization$<$ T $>$}}
+
+
+Статичный интрефейс глубокой сериализации объекта в X\+M\+L  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_ac83c063d51307636d0a7810b42618098}{}static string {\bfseries Serialize} (T serializable\+Object)\label{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_ac83c063d51307636d0a7810b42618098}
+
+\item 
+\hypertarget{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_a4f53832cc038b5d36ef68a0179f65eab}{}static T {\bfseries Deserialize} (string xml)\label{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_a4f53832cc038b5d36ef68a0179f65eab}
+
+\item 
+\hypertarget{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_a7a8b040c752da36c6b23c45fe75ef8a4}{}static bool {\bfseries Try\+Deserialize} (string xml, out T deserialized\+Object)\label{class_hattori_game2_1_1_core_1_1_x_m_l_serialization_a7a8b040c752da36c6b23c45fe75ef8a4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Статичный интрефейс глубокой сериализации объекта в X\+M\+L 
+
+Класс, к которому применяются статичный интерфейс, а также все вложенные структуры, должны быть помечены аттрибутом {\ttfamily Serializable}. Сериализуемые поля объекта также должны быть помечены аттрибутом {\ttfamily Serialize\+Field}
+
+Вот пример объявления класса, который можно сериализовать
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{using} \hyperlink{namespace_unity_engine}{UnityEngine};
+
+[Serializable]
+\textcolor{keyword}{public} \textcolor{keyword}{class }SomeClass
+\{
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{int} FirstField;
+
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{float} SecondField;
+
+    [SerializeField]
+    \textcolor{keyword}{public} OtherClass ThirdField;
+\}
+
+[Serializable]
+\textcolor{keyword}{public} \textcolor{keyword}{class }OtherClass
+\{
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{string} SomeField;
+\}
+\end{DoxyCode}
+ 

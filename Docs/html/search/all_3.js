@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['iserializable',['ISerializable',['../interface_hattori_game2_1_1_core_1_1_i_serializable.html',1,'HattoriGame2::Core']]]
+  ['editorutils',['EditorUtils',['../class_hattori_game2_1_1_editor_1_1_editor_utils.html',1,'HattoriGame2::Editor']]],
+  ['endpadding',['EndPadding',['../class_hattori_game2_1_1_editor_1_1_editor_utils_a2ac7a3491abc2898cf84de9e6910ab2b.html#a2ac7a3491abc2898cf84de9e6910ab2b',1,'HattoriGame2::Editor::EditorUtils']]]
 ];

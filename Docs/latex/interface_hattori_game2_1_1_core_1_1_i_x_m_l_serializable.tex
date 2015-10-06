@@ -1,0 +1,131 @@
+\hypertarget{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable}{}\section{Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable$<$ T $>$ Interface Template Reference}
+\label{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable}\index{Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable$<$ T $>$@{Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable$<$ T $>$}}
+
+
+Интрефейс глубокой сериализации объекта в X\+M\+L  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5f812f3de37013757bf9d7e8ff115a03_a5f812f3de37013757bf9d7e8ff115a03}{Serialize} ()
+\begin{DoxyCompactList}\small\item\em Сериализация объекта в формат X\+M\+L \end{DoxyCompactList}\item 
+bool \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a25ffdca257af050aaa10003adbfb82f7_a25ffdca257af050aaa10003adbfb82f7}{Try\+Deserialize} (string xml, out T deserialized\+Object)
+\begin{DoxyCompactList}\small\item\em Попытка десериализации объекта из X\+M\+L-\/данных \end{DoxyCompactList}\item 
+T \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5723f1b75e6da1a0538324b68f8d1b41_a5723f1b75e6da1a0538324b68f8d1b41}{Deserialize} (string xml)
+\begin{DoxyCompactList}\small\item\em Десериализация объекта из X\+M\+L-\/данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Интрефейс глубокой сериализации объекта в X\+M\+L 
+
+Класс который наследуется от этого интерфейса, а также все вложенные структуры, должны быть помечены аттрибутом {\ttfamily Serializable}. Сериализуемые поля объекта также должны быть помечены аттрибутом {\ttfamily Serialize\+Field}
+
+Стандарная реализация интерфейса распологается в статическом классе \hyperlink{class_hattori_game2_1_1_core_1_1_x_m_l_serializable}{X\+M\+L\+Serializable}
+
+Вот пример объявления класса (с использованием типовых тел), реализующего этот интерфейс
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{using} \hyperlink{namespace_unity_engine}{UnityEngine};
+
+[Serializable]
+\textcolor{keyword}{public} \textcolor{keyword}{class }SomeClass : IXMLSerializable<SomeClass>
+\{
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{int} FirstField;
+
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{float} SecondField;
+
+    [SerializeField]
+    \textcolor{keyword}{public} OtherClass ThirdField;
+
+    \textcolor{keyword}{public} \textcolor{keywordtype}{string} \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5f812f3de37013757bf9d7e8ff115a03_a5f812f3de37013757bf9d7e8ff115a03}{Serialize}()
+    \{
+        \textcolor{keywordflow}{return} XMLSerializable.Serialize<SomeClass>(\textcolor{keyword}{this});
+    \}
+
+    \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a25ffdca257af050aaa10003adbfb82f7_a25ffdca257af050aaa10003adbfb82f7}{TryDeserialize}(\textcolor{keywordtype}{string} xml, out SomeClass deserializedObject)
+    \{
+        \textcolor{keywordflow}{return} XMLSerializable.TryDeserialize<SomeClass>(xml, out deserializedObject);
+    \}
+
+    \textcolor{keyword}{public} SomeClass \hyperlink{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5723f1b75e6da1a0538324b68f8d1b41_a5723f1b75e6da1a0538324b68f8d1b41}{Deserialize}(\textcolor{keywordtype}{string} xml)
+    \{
+        \textcolor{keywordflow}{return} XMLSerializable.Deserialize<SomeClass>(xml);
+    \}
+\}
+
+[Serializable]
+\textcolor{keyword}{public} \textcolor{keyword}{class }OtherClass
+\{
+    [SerializeField]
+    \textcolor{keyword}{public} \textcolor{keywordtype}{string} SomeField;
+\}
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Тип сериализуемого объекта. Сопадает с именем типа, который наследует интерфейс.\\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5723f1b75e6da1a0538324b68f8d1b41_a5723f1b75e6da1a0538324b68f8d1b41}{}\index{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}!Deserialize@{Deserialize}}
+\index{Deserialize@{Deserialize}!Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}}
+\subsubsection[{Deserialize(string xml)}]{\setlength{\rightskip}{0pt plus 5cm}T {\bf Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable}$<$ T $>$.Deserialize (
+\begin{DoxyParamCaption}
+\item[{string}]{xml}
+\end{DoxyParamCaption}
+)}\label{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5723f1b75e6da1a0538324b68f8d1b41_a5723f1b75e6da1a0538324b68f8d1b41}
+
+
+Десериализация объекта из X\+M\+L-\/данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml} & X\+M\+L-\/данные\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Десериализованный объект
+\end{DoxyReturn}
+\hypertarget{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5f812f3de37013757bf9d7e8ff115a03_a5f812f3de37013757bf9d7e8ff115a03}{}\index{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}}
+\subsubsection[{Serialize()}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable}$<$ T $>$.Serialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a5f812f3de37013757bf9d7e8ff115a03_a5f812f3de37013757bf9d7e8ff115a03}
+
+
+Сериализация объекта в формат X\+M\+L 
+
+\begin{DoxyReturn}{Returns}
+X\+M\+L-\/данные
+\end{DoxyReturn}
+\hypertarget{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a25ffdca257af050aaa10003adbfb82f7_a25ffdca257af050aaa10003adbfb82f7}{}\index{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}!Try\+Deserialize@{Try\+Deserialize}}
+\index{Try\+Deserialize@{Try\+Deserialize}!Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable@{Hattori\+Game2\+::\+Core\+::\+I\+X\+M\+L\+Serializable}}
+\subsubsection[{Try\+Deserialize(string xml, out T deserialized\+Object)}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Hattori\+Game2.\+Core.\+I\+X\+M\+L\+Serializable}$<$ T $>$.Try\+Deserialize (
+\begin{DoxyParamCaption}
+\item[{string}]{xml, }
+\item[{out T}]{deserialized\+Object}
+\end{DoxyParamCaption}
+)}\label{interface_hattori_game2_1_1_core_1_1_i_x_m_l_serializable_a25ffdca257af050aaa10003adbfb82f7_a25ffdca257af050aaa10003adbfb82f7}
+
+
+Попытка десериализации объекта из X\+M\+L-\/данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml} & X\+M\+L-\/данные\\
+\hline
+{\em deserialized\+Object} & Десериализованный объект\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, если объект успешно десериализован
+\end{DoxyReturn}
